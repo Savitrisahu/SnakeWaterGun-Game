@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun</title>
+</head>
+<body>
+    <script>
+        let user = prompt("Enter S(for Snake), W (for Water), and G (for Gun)");
+        let cpu1 = Math.floor(Math.random()*3);
+        let cpu = ['s', 'w', 'g'][cpu1]
+        const match = (cpu, user)=>{
+            if(cpu === user){
+                console.log("Tie Game");
+            }
+            else if(cpu === "s" && user === "w"){
+                    console.log("Cpu Win \n Cpu Choose Snake");
+                    
+            }
+            else if(cpu ==="w" && user === "s"){
+                    console.log("User Win \n CPU Choose Water");
+                    
+            }   
+             else if(cpu === "s" && user === "g"){
+                    console.log("User Win \n Cpu Choose Snake");
+                    
+            }
+            else if(cpu ==="g" && user === "s"){
+                    console.log("Cpu Win \n CPU Choose Gun");
+                    
+            }   
+             else if(cpu === "g" && user === "w"){
+                    console.log("user Win \n Cpu Choose Gun");
+                    
+            }
+            else if(cpu ==="w" && user === "g"){
+                    console.log("cpu Win \n CPU Choose Water");
+                    
+            }   
+            else{
+                console.log("You entered Wrong Option");
+                
+            }
+
+        }
+        match(cpu, user)
+    </script>
+</body>
+</html>
